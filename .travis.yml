@@ -2,3 +2,8 @@ language: java
 jdk:
   - oraclejdk8
 script: mvn clean verify
+deploy:
+  provider: heroku
+  api_key: 
+    secure: 890edade-9e09-4e73-97e8-cb30253683ab
+  app: desolate-eyrie-32932
