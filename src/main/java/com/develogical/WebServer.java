@@ -1,5 +1,6 @@
 package com.develogical;
 
+import com.develogical.web.ApiResponse;
 import com.develogical.web.IndexPage;
 import com.develogical.web.ResultsPage;
 import java.io.IOException;
@@ -19,6 +20,7 @@ public class WebServer {
 
     ServletHandler handler = new ServletHandler();
     handler.addServletWithMapping(new ServletHolder(new Website()), "/*");
+    handler.addServletWithMapping(new ServletHolder(new Api()), "/api/*");
     server.setHandler(handler);
 
     server.start();
@@ -34,6 +36,14 @@ public class WebServer {
       } else {
         new ResultsPage(query, new QueryProcessor().process(query)).writeTo(resp);
       }
+    }
+  }
+
+  static class Api extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      String query = req.getParameter("q");
+      new ApiResponse(new QueryProcessor().process(query)).writeTo(resp);
     }
   }
 
