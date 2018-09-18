@@ -1,4 +1,11 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 script: mvn clean verify
+deploy:
+  provider: heroku
+  api_key:
+    secure: WUsD68e7etExWrjwtpMweiUOmtIdVMx9l8/ca2QAZIN2kM7nlMrF/wGh8yNtHIEoTgkEeDjKIrvUES21f7y56XuMVG9jdBNKrfA+Lq7+I5IT+Ep9/swW75nQmoF83nbTQyZ1zo7scEZw3sDrn8V8kijQHNtvR9rtvtiaY7u8FVv4Xk9kEbJRe3/9mWld9LPVOEe7xYvifZKjzrmd9T87L/yMrDKuiC0/4CkAQ0KFmnA1oZjucGJckYH8yTbD6LM8Qbj+YGv/We5vjVQrJPu4S8Pu6cpGGFWp41r4KpI1KEVBxSz163BDVdKnYMKB2+jsQz60JlXFMKh07WekuTrF9Afdx4yB4SBpfQLpGJo6VvpxeyRZ0cZWjfMhmIan0e4wNnEwgS8NGlLPaHJmn1cTGu1DTcwSwO3W56ssfxv1kFoJAUrGzyoprs8YVIIuMJeVmn3uQZpOYvBy/X79B7lmrFdZpb2StWPtyHQXpBehJUYKV2U2a588c7nml5hsm8IRjJn8anDsHMHnDKEryysgOpP737ntC4AUirx7RIyEOSHRz++CFqRVu+mmZ0nF3RJZLpLcH2TI4WIEYhMc+lhB7yZqRVXje+JlzWfnsq/NTXQRakWzRflNL8cWG7Xb12gF2eVp+kQVkS8XxEq3KThIo232qTU5O/doLQ2zYxbP7BE=
+  app: horse-battery-66
+  on:
+    repo: rchatley/BasicWebApp
