@@ -1,4 +1,4 @@
-package ic.doc;
+package com.develogical;
 
 public class QueryProcessor {
 

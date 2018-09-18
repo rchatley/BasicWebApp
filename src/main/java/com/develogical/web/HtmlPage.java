@@ -1,4 +1,4 @@
-package ic.doc.web;
+package com.develogical.web;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

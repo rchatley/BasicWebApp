@@ -1,4 +1,4 @@
-package ic.doc.web;
+package com.develogical.web;
 
 import java.io.PrintWriter;
 
