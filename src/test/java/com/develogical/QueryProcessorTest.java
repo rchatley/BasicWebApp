@@ -24,4 +24,10 @@ public class QueryProcessorTest {
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
+
+    @Test
+    public void canCompareIntegers() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 123, 321, 10"), containsString("321"));
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 1, 2, 3, 4"), containsString("4"));
+    }
 }
