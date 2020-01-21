@@ -12,10 +12,10 @@ public class ComparisonProcessor extends AbstractQueryProcessor {
 
     @Override
     public String getAnswer(Matcher parsedQuery) {
-        String[] numbers = parsedQuery.group(0).split(", ");
+        String[] numbers = parsedQuery.group(1).split(", ");
         int max = Arrays.stream(numbers)
                 .mapToInt(Integer::parseInt)
-                .max().orElseThrow();
+                .max().getAsInt();
         return String.valueOf(max);
     }
 }
