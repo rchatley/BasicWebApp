@@ -4,7 +4,6 @@ jdk:
 script: mvn clean verify
 deploy:
   provider: heroku
-  api_key:
-    secure: 6ea6bd63-79ba-44d3-bd56-22747a774d6a
+  api_key: 6ea6bd63-79ba-44d3-bd56-22747a774d6a
   app: skeleton-web-app-21
 
