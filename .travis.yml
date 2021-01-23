@@ -5,6 +5,6 @@ script: mvn clean verify
 deploy:
   provider: heroku
   api_key:
-    secure: PCzihkgWQi/MKXi5nGxSkimy5Sm0D3R0/Kw/62sVnUF9Z2C1LNtHTcGgjzM2L3Ad+Htxx5D64gRgdaZsdG8YrEyZlS0TnMJn7aBhPqumPnBaG7wXUVMOSYG5EvFOwTPFwxQKuWIroT+ztw8xY4ghNBvQbCxwo1o9TYLllKBBRQHRlrrDbReqL5WcHdGhbVB5TEpdzEWOAr6qCOpAaR606rP/twnT4CMpIC4aktaR9NV0g/Gz7UYkvAVQEYCHvWiiSjCZXTF+edmxmeggQM37Z4SleqPwi5EG67sk1jfvcJJghVmsx9KO/wb6KQiIS26n+sCIwjl2PuJOgoSkAC3q8qoWjhhFTQN+c+r+4UjZWUxBNtVo6XdWDQExA+nVd8CGJ1398XkNeTSHfXoDF+9478OuNw/yOVD+/0761e0UVk0Uk/3XNYba4C/dO1eZSL82UdceUb9ECfJueAMs0KX1iNsg2RVjjZcd5oBwNOZ1x5E9p0q9r+ppENH4Vy9uX4HK7iAEzcvSeznNTBI2NVjNR4hx8Rz/MKMD4UQ4Of7CetBwBcamzVWRQXyil4gyUT58Q6gdhI4ls+RpR4jmEmjhr5XVkcxiHj8yHkbn3vYLZWgR/8xWQYNL1NpjyfyL68X0iOC96Zcp4D5pY+m0xofdxFH25U3xpQsZ2AafmzHasPE=
+    secure: 04e38f82-08f1-4c4f-a664-2b9a7e91b787
   app: skeleton-web-app-21
 
