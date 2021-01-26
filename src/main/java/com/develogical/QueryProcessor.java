@@ -8,7 +8,7 @@ public class QueryProcessor {
                     + "English poet, playwright, and actor, widely regarded as the greatest "
                     + "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.toLowerCase().contains("best singer")) {
-            return "Taylor Swift (born December 13, 1989) is an American singer-songwriter.";
+            return "Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter.";
         }
         return "";
     }
