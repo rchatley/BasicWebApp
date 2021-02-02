@@ -23,7 +23,22 @@ public class QueryProcessor {
             return Integer.toString(result);
         } else if (query.toLowerCase().contains("what is your name")) {
             return "teamNameHere";
+        } else if (query.toLowerCase().contains("which of the following numbers is the largest")) {
+        query = query.replaceAll("\\D+","_");
+        String[] numbers = query.split("_");
+        int largest = Integer.MIN_VALUE;
+        for (String number : numbers) {
+            try {
+                int num = Integer.parseInt(number);
+                if (num > largest) {
+                    largest = num;
+                }
+            } catch (NumberFormatException e) {
+                //do nothing
+            }
         }
+        return Integer.toString(largest);
+    }
         return "";
     }
 }
