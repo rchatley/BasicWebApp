@@ -7,10 +7,19 @@ public class QueryProcessor {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an "
                     + "English poet, playwright, and actor, widely regarded as the greatest "
                     + "writer in the English language and the world's pre-eminent dramatist.";
-        } else if (query.toLowerCase().contains("best singer")) {
-            return "Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter.";
-        } else if (query.toLowerCase().contains("your name")) {
-            return "SEI Baes";
+        } else if (query.toLowerCase().contains("largest")) {
+            String[] parts = query.split("[:,]");
+
+            int largest = 0;
+            for (int i = 1; i < parts.length; i++) {
+                String y = parts[i].replace(" ", "");
+                int x = Integer.parseInt(y);
+                if (x > largest) {
+                    largest = x;
+                }
+            }
+            
+            return String.valueOf(largest);
         }
         return "";
     }
