@@ -29,4 +29,9 @@ public class QueryProcessorTest {
     public void knowsWhoTheBestSingerIs() throws Exception {
         assertThat(queryProcessor.process("Best Singer"), containsString("Taylor Alison Swift"));
     }
+
+    @Test
+    public void knowsTeamName() throws Exception {
+        assertThat(queryProcessor.process("your name"), containsString("SEI Baes"));
+    }
 }

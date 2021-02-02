@@ -9,6 +9,8 @@ public class QueryProcessor {
                     + "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.toLowerCase().contains("best singer")) {
             return "Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter.";
+        } else if (query.toLowerCase().contains("your name")) {
+            return "SEI Baes";
         }
         return "";
     }
