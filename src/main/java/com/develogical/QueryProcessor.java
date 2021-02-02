@@ -15,6 +15,12 @@ public class QueryProcessor {
                     "computer science, providing a formalisation of the concepts of " +
                     "algorithm and computation with the Turing machine, which can be " +
                     "considered a model of a general-purpose computer.";
+        } else if (query.toLowerCase().contains("plus")) {
+            String[] nums = query.split("plus");
+            int num1=Integer.parseInt(nums[0]);
+            int num2=Integer.parseInt(nums[0]);
+            int result = num1 + num2;
+            return Integer.toString(result);
         }
         return "";
     }
