@@ -17,6 +17,8 @@ public class QueryProcessor {
                     "and City and Guilds College. In 1988, the Imperial College School of Medicine was formed by " +
                     "combining with St Mary's Hospital Medical School. In 2004, Queen Elizabeth II opened the Imperial " +
                     "College Business School. ";
+        } else if (query.toLowerCase().contains("what is your name")) {
+            return "Which github project do we use";
         }
         return "";
     }
