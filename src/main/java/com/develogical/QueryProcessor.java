@@ -15,6 +15,8 @@ public class QueryProcessor {
                     "computer science, providing a formalisation of the concepts of " +
                     "algorithm and computation with the Turing machine, which can be " +
                     "considered a model of a general-purpose computer.";
+        } else if (query.toLowerCase().contains("what is your name")) {
+            return "teamNameHere";
         }
         return "";
     }
