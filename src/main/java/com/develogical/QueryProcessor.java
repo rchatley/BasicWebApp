@@ -21,6 +21,8 @@ public class QueryProcessor {
             int num2=Integer.parseInt(nums[0]);
             int result = num1 + num2;
             return Integer.toString(result);
+        } else if (query.toLowerCase().contains("what is your name")) {
+            return "teamNameHere";
         }
         return "";
     }
