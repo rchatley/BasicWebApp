@@ -43,6 +43,18 @@ public class QueryProcessor {
             return "No idea";
         }
 
+        if (query.toLowerCase().contains("multiplied by")) {
+            Pattern pattern = Pattern.compile("what is (\\d) multiplied by (\\d)");
+            Matcher matcher = pattern.matcher(query.toLowerCase());
+
+            if (matcher.find()) {
+                int result = Integer.parseInt(matcher.group(1)) * Integer.parseInt(matcher.group(2));
+                return String.valueOf(result);
+            }
+
+            return "No idea";
+        }
+
         return "";
     }
 }
