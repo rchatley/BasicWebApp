@@ -19,7 +19,7 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("name")) {
             return "FathomlessDepths";
         }
-
+        
         if (query.toLowerCase().contains("largest")) {
             String[] numbers = query.split(":")[2].split(",");
             int max = 0;
