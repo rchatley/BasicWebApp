@@ -32,6 +32,11 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void canLargest() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 100, 500"), is("500"));
+    }
+
+    @Test
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
