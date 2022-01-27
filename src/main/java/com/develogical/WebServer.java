@@ -15,7 +15,6 @@ import org.eclipse.jetty.servlet.ServletHolder;
 public class WebServer {
 
   public WebServer() throws Exception {
-
     Server server = new Server(portNumberToUse());
 
     ServletHandler handler = new ServletHandler();
@@ -27,7 +26,6 @@ public class WebServer {
   }
 
   static class Website extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
       String query = req.getParameter("q");
