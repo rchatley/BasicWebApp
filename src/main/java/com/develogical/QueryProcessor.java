@@ -8,7 +8,7 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
-        if (query.toLowerCase().contains("team name")) {
+        if (query.toLowerCase().contains("name")) {
             return "MyTeam";
         }
         return "";
