@@ -26,5 +26,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "limitless-reef-13572"
+          heroku_app_name: "horse-battery-66"
           heroku_email: "robert@develogical.com"
