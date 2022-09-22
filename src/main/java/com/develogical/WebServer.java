@@ -48,7 +48,7 @@ public class WebServer {
   }
 
   private Integer portNumberToUse() {
-    return System.getenv("PORT") != null ? Integer.valueOf(System.getenv("PORT")) : 8080;
+    return System.getenv("PORT") != null ? Integer.valueOf(System.getenv("PORT")) : 8081;
   }
 
   public static void main(String[] args) throws Exception {
