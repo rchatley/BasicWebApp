@@ -1,0 +1,8 @@
+com/develogical/web/IndexPage.class
+com/develogical/web/HtmlPage.class
+com/develogical/QueryProcessor.class
+com/develogical/web/ApiResponse.class
+com/develogical/WebServer$Website.class
+com/develogical/WebServer$Api.class
+com/develogical/WebServer.class
+com/develogical/web/ResultsPage.class
