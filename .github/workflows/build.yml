@@ -26,5 +26,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "nameless-forest-60668"
-          heroku_email: "robert@develogical.com"
+          heroku_app_name: "lolandrew1-app"
+          heroku_email: "slipher1801@gmail.com"
