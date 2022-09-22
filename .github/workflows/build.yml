@@ -27,4 +27,4 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "app-name-idontknow"
-          heroku_email: "karensong@andrew.cmu.edu"
+          heroku_email: "karenson@andrew.cmu.edu"
