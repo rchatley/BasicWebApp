@@ -2,7 +2,7 @@ on: [ push ]
 
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,10 +16,10 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
 
-    deploy:
-      name: Deploy app
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: superfly/flyctl-actions/setup-flyctl@master
-        - run: flyctl deploy --remote-only
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: flyctl deploy --remote-only
