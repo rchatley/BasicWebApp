@@ -1,0 +1,16 @@
+# flyctl launch added from .gitignore
+**/target
+**/*.class
+**/*.iml
+**/*.ipr
+**/.idea
+**/.classpath
+**/.settings
+**/.project
+**/.DS_Store
+**/notes
+
+# flyctl launch added from .idea/.gitignore
+# Default ignored files
+.idea/shelf
+.idea/workspace.xml
