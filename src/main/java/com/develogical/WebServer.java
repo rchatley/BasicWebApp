@@ -42,8 +42,14 @@ public class WebServer {
   static class Api extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      System.out.println(req.getRequestURI());
+      System.out.println(req.getParameterMap());
       String query = req.getParameter("q");
-      new ApiResponse(new QueryProcessor().process(query)).writeTo(resp);
+      if (query != null) {
+        new ApiResponse(new QueryProcessor().process(query)).writeTo(resp);
+      } else {
+        new ApiResponse(new QueryProcessor().process("EMPTY")).writeTo(resp);
+      }
     }
   }
 
