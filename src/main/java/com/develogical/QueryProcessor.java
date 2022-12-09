@@ -34,7 +34,7 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("name")) {
-            return "RobTest";
+            return "TestTwo";
         }
         return "";
     }
