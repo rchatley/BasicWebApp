@@ -30,7 +30,7 @@ public class QueryProcessor {
             String list = query.split(":")[1];
 
             String[] numbers = list.split(",|\\?");
-            return String.valueOf(Arrays.stream(numbers).map(String::trim).mapToInt(Integer::parseInt).max());
+            return String.valueOf(Arrays.stream(numbers).map(String::trim).mapToInt(Integer::parseInt).max().getAsInt());
         }
 
         if (query.toLowerCase().contains("name")) {
