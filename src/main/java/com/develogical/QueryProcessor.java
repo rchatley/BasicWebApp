@@ -1,6 +1,7 @@
 package com.develogical;
 
 import java.util.Arrays;
+import java.util.function.BinaryOperator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,14 +18,11 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("plus")) {
-            Pattern twoNumbers = Pattern.compile("What is (\\d+) plus (\\d+)?");
-            Matcher matcher = twoNumbers.matcher(query);
-            if (matcher.find()) {
-                int a = Integer.parseInt(matcher.group(1));
-                int b = Integer.parseInt(matcher.group(2));
-                return String.valueOf(a + b);
-            }
-            return "Did not find";
+            return extractTwoNumbersAnd(query, (x, y) -> x + y);
+        }
+
+        if (query.toLowerCase().contains("multiplied by")) {
+            return extractTwoNumbersAnd(query, (x, y) -> x * y);
         }
 
         if (query.toLowerCase().contains("largest")) {
@@ -39,5 +37,16 @@ public class QueryProcessor {
             return "RobTest";
         }
         return "";
+    }
+
+    private String extractTwoNumbersAnd(String query, BinaryOperator<Integer> func) {
+        Pattern twoNumbers = Pattern.compile("What is (\\d+) (plus|multiplied by) (\\d+)?");
+        Matcher matcher = twoNumbers.matcher(query);
+        if (matcher.find()) {
+            int a = Integer.parseInt(matcher.group(1));
+            int b = Integer.parseInt(matcher.group(3));
+            return String.valueOf(func.apply(a, b));
+        }
+        return null;
     }
 }
