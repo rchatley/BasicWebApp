@@ -11,17 +11,12 @@ public class QueryProcessorTest {
     QueryProcessor queryProcessor = new QueryProcessor();
 
     @Test
-    public void returnsEmptyStringIfCannotProcessQuery() throws Exception {
-        assertThat(queryProcessor.process("test"), is(""));
-    }
-
-    @Test
     public void knowsAboutShakespeare() throws Exception {
         assertThat(queryProcessor.process("Shakespeare"), containsString("playwright"));
     }
 
     @Test
-    public void knowsAboutImperial() throws Exception {
+    public void knowsTeamName() throws Exception {
         assertThat(queryProcessor.process("name"),
                 containsString("TestTwo"));
     }

@@ -36,7 +36,7 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("name")) {
             return "TestTwo";
         }
-        return "";
+        return "dont know";
     }
 
     private String extractTwoNumbersAnd(String query, BinaryOperator<Integer> func) {
