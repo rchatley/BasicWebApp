@@ -16,30 +16,6 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void knowsTeamName() throws Exception {
-        assertThat(queryProcessor.process("name"),
-                containsString("TestTwo"));
-    }
-
-    @Test
-    public void canAddUp() throws Exception {
-        assertThat(queryProcessor.process("What is 14 plus 3?"),
-                containsString("17"));
-    }
-
-    @Test
-    public void canMultiply() throws Exception {
-        assertThat(queryProcessor.process("What is 7 multiplied by 3?"),
-                containsString("21"));
-    }
-
-    @Test
-    public void canFindLargest() throws Exception {
-        assertThat(queryProcessor.process("Which of the following numbers is the largest: 45, 101, 25, 58, 76, 12, 80, 94?"),
-                is("101"));
-    }
-
-    @Test
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
